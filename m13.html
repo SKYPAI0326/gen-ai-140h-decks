@@ -580,8 +580,8 @@
 .slide .frame > div[style*="display:grid"][style*="grid-template-columns"]{padding-top:.7vh !important;padding-bottom:.7vh !important}
 
 
-/* landscape-mobile-fix v3 */
-@media (max-height:700px) and (orientation:landscape) {
+/* landscape-mobile-fix v4 */
+@media (max-height:900px) and (orientation:landscape) {
   .slide { padding: 1vh 3.5vw 1.4vh 3.5vw !important }
   .frame { gap: .5vh !important }
   .chrome, .foot { font-size: max(8px, 1.4vh) !important; letter-spacing: .12em }
@@ -624,10 +624,14 @@
   pre, code { font-size: max(9px, 1.5vh) !important }
   /* portrait overlay 在 landscape 不顯示 */
   #portrait-hint { display: none !important }
+
+  /* 內容若仍超出，允許在 frame 內向下捲動（橫向滑頁不受影響） */
+  .slide { overflow-y: auto !important; -webkit-overflow-scrolling: touch }
+  .frame { overflow: visible !important; min-height: auto !important }
 }
 
 /* ===== compact-landscape：對 4–7 列 rowline 的密集頁加更激進壓縮 ===== */
-@media (max-height:700px) and (orientation:landscape) {
+@media (max-height:900px) and (orientation:landscape) {
   .slide.compact-landscape .frame { padding-top: .4vh !important }
   .slide.compact-landscape .kicker { margin-bottom: .2vh !important; font-size: max(7px, 1.1vh) !important }
   .slide.compact-landscape .h-xl { font-size: max(15px, 3.4vh) !important; line-height: 1.04 !important; margin: 0 !important }
