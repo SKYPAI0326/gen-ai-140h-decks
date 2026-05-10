@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生成式 AI 應用工程師 140hr · 講師簡報集｜弄一下工作室</title>
+<meta name="theme-color" content="#2a1e13">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+SC:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#2a1e13;--ink-rgb:42,30,19;--paper:#eedfc7;--paper-rgb:238,223,199;--paper-tint:#e0d0b6;--serif-zh:"Noto Serif SC",serif;--sans-zh:"Noto Sans SC",sans-serif;--serif-en:"Playfair Display",Georgia,serif;--mono:"IBM Plex Mono",monospace}
+*{box-sizing:border-box;margin:0;padding:0}html,body{background:var(--paper);color:var(--ink);font-family:var(--sans-zh);-webkit-font-smoothing:antialiased;line-height:1.65}a{color:inherit;text-decoration:none}
+em{font-family:var(--serif-en),var(--serif-zh);font-style:italic;font-weight:inherit;letter-spacing:.03em;font-synthesis-style:none;position:relative;z-index:1}em::after{content:"";position:absolute;left:-.08em;right:-.08em;bottom:.04em;height:.24em;z-index:-1;pointer-events:none;background:rgba(var(--ink-rgb),.13);border-radius:1px}
+.topbar{position:sticky;top:0;z-index:50;height:56px;background:rgba(var(--paper-rgb),.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(var(--ink-rgb),.12);display:flex;align-items:center;padding:0 6vw;gap:18px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase}.topbar .logo{font-family:var(--serif-zh);font-weight:700;font-size:14px;letter-spacing:.05em;text-transform:none}.spacer{flex:1}
+.hero{padding:14vh 6vw 8vh}.hero .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.55;margin-bottom:3vh}.hero h1{font-family:var(--serif-zh);font-weight:900;font-size:min(8.4vw,124px);line-height:.96;letter-spacing:-.02em;margin-bottom:3vh}.hero .sub{font-family:var(--serif-zh);font-weight:500;font-size:min(3vw,38px);line-height:1.25;opacity:.72;margin-bottom:4vh;max-width:36em}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:3vw;padding:0 6vw 8vh;border-bottom:1px solid rgba(var(--ink-rgb),.12)}.stat{padding-top:2vh;border-top:1px solid var(--ink)}.stat .l{font-family:var(--mono);font-size:max(10px,.78vw);letter-spacing:.24em;text-transform:uppercase;opacity:.55;margin-bottom:1vh}.stat .n{font-family:var(--serif-en);font-weight:800;font-size:min(5.4vw,80px);line-height:.9;letter-spacing:-.03em}.stat .u{font-family:var(--serif-zh);font-weight:500;font-size:.4em;letter-spacing:0;opacity:.7;margin-left:.16em}
+.modules{padding:8vh 6vw}.modules h2{font-family:var(--serif-zh);font-weight:700;font-size:min(4vw,56px);line-height:1.1;margin-bottom:2vh}.modules .h2-sub{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;opacity:.6;margin-bottom:6vh}
+.part-band{display:flex;align-items:baseline;gap:1.6em;padding:3vh 0 2vh;margin-top:4vh;border-top:1px solid rgba(var(--ink-rgb),.18);font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;opacity:.7}.part-band .part-name{font-family:var(--serif-zh);font-weight:700;font-size:min(2.2vw,28px);letter-spacing:0;text-transform:none;opacity:1}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.4vh 2vw}
+.card{display:block;padding:3vh 1.6vw;background:rgba(var(--ink-rgb),.04);border:1px solid rgba(var(--ink-rgb),.12);border-radius:6px;transition:all .25s ease;border-left:4px solid var(--ink)}.card:hover{background:rgba(var(--ink-rgb),.07);border-color:rgba(var(--ink-rgb),.32);transform:translateY(-2px)}
+.card .meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.4vh;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.6}.card h3{font-family:var(--serif-zh);font-weight:700;font-size:min(1.55vw,22px);line-height:1.25;margin-bottom:1vh}.card .sub{font-family:var(--serif-zh);font-weight:400;font-size:max(12px,.86vw);line-height:1.5;opacity:.74;margin-bottom:1.4vh;min-height:3em}.card .stats-row{display:flex;gap:1.2em;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin-bottom:1.2vh}.card .open{display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:.3em;opacity:.85}
+footer{padding:6vh 6vw;display:flex;justify-content:space-between;align-items:baseline;gap:2vh;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.55}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,1fr);gap:4vh 4vw}.grid{grid-template-columns:1fr}.hero h1{font-size:13vw}.hero .sub{font-size:5.5vw}.card .sub{min-height:0}}
+</style></head><body>
+<header class="topbar"><a class="logo" href="./">弄一下工作室</a><span class="spacer"></span><span>生成式 AI 應用工程師 140hr · 講師簡報集</span></header>
+<section class="hero"><div class="kicker">A Magazine of Lectures · 2026 · Pinnacle</div><h1>生成式 AI<br>應用工程師<br><em>140 小時</em></h1><div class="sub">7 Parts · 20 Decks · 全棧覆蓋 Prompt → API → Agents → MVP 上線的旗艦課程。</div></section>
+<section class="stats"><div class="stat"><div class="l">Total Hours</div><div class="n">140<span class="u">hr</span></div></div><div class="stat"><div class="l">Decks</div><div class="n">20</div></div><div class="stat"><div class="l">Total Slides</div><div class="n" id="slidesNum">~700</div></div><div class="stat"><div class="l">Theme</div><div class="n" style="font-size:min(2.4vw,32px);font-family:var(--serif-zh)">牛皮紙</div></div></section>
+<section class="modules"><h2>20 個 <em>單元</em></h2><div class="h2-sub">D00 – D19 · 7 Parts · 由淺入深</div>
+
+<div class="part-band"><span>Part 0</span><span class="part-name">Pre-class · 環境設定</span></div>
+<div class="grid">
+<a class="card" href="m00.html"><div class="meta"><span>D00 · Pre-class</span><span>30 頁</span></div><h3>環境設定</h3><div class="sub">Mac/Win 跨平台環境統一 + Cursor / Cline / Claude Code 三套設置 + Git 起點。</div><div class="stats-row"><span>5 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 1</span><span class="part-name">Prompt 基礎 + System Prompt</span></div>
+<div class="grid">
+<a class="card" href="m01.html"><div class="meta"><span>D01 · Part 1 開場</span><span>32 頁</span></div><h3>Part 1 + <em>CH1-1</em></h3><div class="sub">Part 開場 + AI 演進與 LLM 第一性原理 + 框架定位。</div><div class="stats-row"><span>6 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m02.html"><div class="meta"><span>D02 · CH1-2/3</span><span>38 頁</span></div><h3>Prompt <em>基礎</em></h3><div class="sub">CH1-2 + CH1-3 + PRAC1-1/2 · 結構化提問 + Few-shot + CoT 入門。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m03.html"><div class="meta"><span>D03 · CH1-4</span><span>36 頁</span></div><h3>System <em>Prompt</em></h3><div class="sub">CH1-4 + PRAC1-3/4 · 角色設定 / Persona / 防注入 / 多輪對話設計。</div><div class="stats-row"><span>7 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 2</span><span class="part-name">文字 · 知識管理 · 研究 · 多模態</span></div>
+<div class="grid">
+<a class="card" href="m04.html"><div class="meta"><span>D04 · CH2-1/2</span><span>38 頁</span></div><h3>文字 + <em>知識管理</em></h3><div class="sub">CH2-1 + CH2-2 + PRAC2-1/2 · 寫作流水線 + RAG 起手 + Obsidian 個人知識庫。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m05.html"><div class="meta"><span>D05 · CH2-3/4</span><span>40 頁</span></div><h3>研究 + <em>多模態</em></h3><div class="sub">CH2-3 + CH2-4 + PRAC2-3/4 · Deep Research + 圖文影音多模態工作流。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 3</span><span class="part-name">資料清理 + 工作流自動化</span></div>
+<div class="grid">
+<a class="card" href="m06.html"><div class="meta"><span>D06 · Part 3 開場</span><span>36 頁</span></div><h3>資料 <em>清理</em></h3><div class="sub">CH3-1 + PRAC3-1/2 · 結構化資料清洗 + Pandas + AI 輔助 ETL。</div><div class="stats-row"><span>7 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m07.html"><div class="meta"><span>D07 · CH3-2/3</span><span>38 頁</span></div><h3>工作流 <em>自動化</em></h3><div class="sub">CH3-2 + CH3-3 + PRAC3-3/4 · n8n / Make / Zapier × LLM × Webhook。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 4</span><span class="part-name">工具生成 + 部署上線</span></div>
+<div class="grid">
+<a class="card" href="m08.html"><div class="meta"><span>D08 · Part 4 開場</span><span>38 頁</span></div><h3>工具 <em>生成</em></h3><div class="sub">CH4-1 + CH4-2 + PRAC4-1/2 · Vibe coding + Cursor + 從零做出可用工具。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m09.html"><div class="meta"><span>D09 · CH4-3</span><span>36 頁</span></div><h3>部署 <em>上線</em></h3><div class="sub">CH4-3 + PRAC4-3/4 · Vercel / Cloudflare Pages / Render + 域名與 SSL。</div><div class="stats-row"><span>7 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 5</span><span class="part-name">前端 · Git · 全端 · 自由演練</span></div>
+<div class="grid">
+<a class="card" href="m10.html"><div class="meta"><span>D10 · Part 5 開場</span><span>40 頁</span></div><h3>前端 <em>基礎</em></h3><div class="sub">CH5-1 + CH5-2 + PRAC5-1/2 · HTML/CSS/JS 基本盤 + AI 速成。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m11.html"><div class="meta"><span>D11 · CH5-3/4</span><span>38 頁</span></div><h3>Git + <em>全端</em></h3><div class="sub">CH5-3 + CH5-4 + PRAC5-3/4 · Git/GitHub + Next.js + 全端串接。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m12.html"><div class="meta"><span>D12 · 自由演練</span><span>32 頁</span></div><h3>自由 <em>演練庫</em></h3><div class="sub">PRAC5-5~5-12 · 8 個 mini project，補強自由探索與專題訓練。</div><div class="stats-row"><span>6 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 6</span><span class="part-name">API · Function · Agents · Streaming · RAG · Evals</span></div>
+<div class="grid">
+<a class="card" href="m13.html"><div class="meta"><span>D13 · Part 6 開場</span><span>30 頁</span></div><h3>Part 6 + <em>API 基礎</em></h3><div class="sub">CH6-1 + CH6-2 · OpenAI / Anthropic SDK + Token / pricing / streaming 基礎。</div><div class="stats-row"><span>6 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m14.html"><div class="meta"><span>D14 · CH6-3/4</span><span>30 頁</span></div><h3>Function + <em>Agents</em></h3><div class="sub">CH6-3 + CH6-4 · Function calling + Tool use + Agent loop。</div><div class="stats-row"><span>6 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m15.html"><div class="meta"><span>D15 · CH6-5</span><span>30 頁</span></div><h3>Streaming + <em>RAG</em></h3><div class="sub">CH6-5 + PRAC6-1 · 串流回應 + 向量檢索 + RAG pipeline。</div><div class="stats-row"><span>6 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m16.html"><div class="meta"><span>D16 · PRAC6-2/3/4</span><span>32 頁</span></div><h3>Evals · Guardrails · <em>Cost</em></h3><div class="sub">PRAC6-2/3/4 · 評估流程 + 護欄 + 成本與額度控管。</div><div class="stats-row"><span>7 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+<div class="part-band"><span>Part 7</span><span class="part-name">MVP Kickoff · Build & Ship · Graduation</span></div>
+<div class="grid">
+<a class="card" href="m17.html"><div class="meta"><span>D17 · CH7-1/2</span><span>30 頁</span></div><h3>MVP <em>Kickoff</em></h3><div class="sub">CH7-1 + CH7-2 · 從題目到原型：問題框架 + 假設樹 + Spec。</div><div class="stats-row"><span>6 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m18.html"><div class="meta"><span>D18 · CH7-3/4</span><span>38 頁</span></div><h3>Build & <em>Ship</em></h3><div class="sub">CH7-3 + CH7-4 + PRAC7-1/2/3 · 全棧打造 + 上線 + 內部 Demo。</div><div class="stats-row"><span>8 hr</span></div><span class="open">開啟 →</span></a>
+<a class="card" href="m19.html"><div class="meta"><span>D19 · 畢業</span><span>35 頁</span></div><h3>Graduation · <em>140hr 收束</em></h3><div class="sub">PRAC7-4/5 + 整 140hr 畢業典禮 + 下一步學習地圖。</div><div class="stats-row"><span>5 hr</span></div><span class="open">開啟 →</span></a>
+</div>
+
+</section>
+<footer><span>弄一下工作室 · 生成式 AI 應用工程師 140hr · 講師簡報集</span><span>Lecturer Decks · 2026 · Pinnacle</span></footer>
+</body></html>
