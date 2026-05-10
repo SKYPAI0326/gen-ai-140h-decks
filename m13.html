@@ -580,40 +580,101 @@
 .slide .frame > div[style*="display:grid"][style*="grid-template-columns"]{padding-top:.7vh !important;padding-bottom:.7vh !important}
 
 
-/* landscape-mobile-fix v1 */
+/* landscape-mobile-fix v2 */
 @media (max-height:500px) and (orientation:landscape) {
-  .slide { padding: 1.4vh 4vw 2vh 4vw }
-  .frame { gap: .8vh }
-  .chrome, .foot { font-size: max(9px, 1.6vh); letter-spacing: .14em }
-  .kicker { font-size: max(9px, 1.5vh); margin-bottom: .8vh; letter-spacing: .22em }
-  .h-hero, .h1-zh { font-size: max(28px, 8vh) !important; line-height: 1.05 }
-  .h-xl { font-size: max(22px, 5.6vh) !important; line-height: 1.06 }
-  .h-sub, .h2-zh { font-size: max(18px, 3.8vh) !important; line-height: 1.18 }
-  .h-md, .h3-zh { font-size: max(15px, 2.8vh) !important; line-height: 1.22 }
-  .h-lg { font-size: max(20px, 4.2vh) !important; line-height: 1.1 }
-  .lead { font-size: max(13px, 2.2vh) !important; line-height: 1.4 }
-  .body-zh, .body-serif { font-size: max(11px, 1.9vh) !important; line-height: 1.45 }
-  .callout { padding: .8vh 2vw; font-size: max(11px, 1.9vh); line-height: 1.4 }
-  .rowline { padding: .5vh 0; gap: 1.4vw }
-  .rowline .k { font-size: max(11px, 1.9vh) }
-  .rowline .v { font-size: max(10px, 1.7vh); line-height: 1.35 }
-  .rowline .m { font-size: max(9px, 1.5vh) }
-  .stat-card { padding: 1vh 1.6vw }
-  .stat-nb, .stat-n { font-size: max(20px, 4.4vh) !important; line-height: 1 }
-  .stat-label, .stat-l { font-size: max(9px, 1.5vh); letter-spacing: .18em }
-  .stat-unit, .stat-u { font-size: .42em }
-  .stat-note { font-size: max(9px, 1.5vh); line-height: 1.4 }
-  .step { padding: .6vh 1vw }
-  .step-nb { font-size: max(11px, 2vh) }
-  .step-title { font-size: max(13px, 2.4vh); line-height: 1.2 }
-  .step-desc { font-size: max(10px, 1.7vh); line-height: 1.4 }
-  .meta-row { gap: .6em 1.2em; margin-top: .4vh; font-size: max(10px, 1.6vh) }
-  .grid-2, .grid-3, .grid-4, .grid-6, .grid-2-7-5, .grid-2-6-6, .grid-2-8-4, .grid-3-3 { gap: 1vh 2vw !important }
-  .pillar { padding: .8vh 1.4vw }
-  .level-row { padding: .8vh 0 }
-  .frame > * + * { margin-top: 0 }
-  /* 取消 portrait overlay 在 landscape：明確不顯示 */
+  .slide { padding: 1vh 3.5vw 1.4vh 3.5vw !important }
+  .frame { gap: .5vh !important }
+  .chrome, .foot { font-size: max(8px, 1.4vh) !important; letter-spacing: .12em }
+  .kicker { font-size: max(8px, 1.3vh) !important; margin-bottom: .5vh !important; letter-spacing: .2em }
+  .h-hero, .h1-zh, .display-zh { font-size: max(24px, 7vh) !important; line-height: 1.04 !important }
+  .h-xl { font-size: max(20px, 4.8vh) !important; line-height: 1.05 !important; margin-bottom: .4vh !important }
+  .h-sub, .h2-zh { font-size: max(16px, 3.4vh) !important; line-height: 1.15 !important }
+  .h-md, .h3-zh { font-size: max(13px, 2.4vh) !important; line-height: 1.2 !important }
+  .h-lg { font-size: max(18px, 3.8vh) !important; line-height: 1.08 !important }
+  .lead { font-size: max(11px, 1.9vh) !important; line-height: 1.35 !important; margin-bottom: .4vh !important }
+  .body-zh, .body-serif { font-size: max(10px, 1.6vh) !important; line-height: 1.4 !important; margin: 0 !important }
+  .callout { padding: .6vh 1.6vw !important; font-size: max(10px, 1.6vh) !important; line-height: 1.35 !important; margin: 0 !important }
+  .callout .body-zh, .callout .body-serif { font-size: max(10px, 1.6vh) !important }
+  .callout-src { font-size: max(8px, 1.3vh); margin-top: .4vh !important }
+  .rowline { padding: .35vh 0 !important; gap: 1.2vw !important }
+  .rowline .k { font-size: max(10px, 1.7vh) !important; line-height: 1.15 }
+  .rowline .v { font-size: max(9px, 1.5vh) !important; line-height: 1.3 }
+  .rowline .m { font-size: max(8px, 1.3vh) !important; line-height: 1.3 }
+  .stat-card { padding: .6vh 1.2vw !important }
+  .stat-nb, .stat-n, .big-num, .mid-num { font-size: max(20px, 4vh) !important; line-height: .96 !important }
+  .stat-label, .stat-l { font-size: max(8px, 1.3vh) !important; letter-spacing: .16em }
+  .stat-unit, .stat-u { font-size: .42em !important }
+  .stat-note { font-size: max(8px, 1.3vh) !important; line-height: 1.3 }
+  .step { padding: .4vh .8vw !important }
+  .pipeline { gap: .4vh !important }
+  .step-nb { font-size: max(10px, 1.8vh) !important }
+  .step-title { font-size: max(11px, 2vh) !important; line-height: 1.18 }
+  .step-desc { font-size: max(9px, 1.5vh) !important; line-height: 1.35 }
+  .meta-row { gap: .4em 1em !important; margin-top: .3vh !important; font-size: max(9px, 1.4vh) !important }
+  .grid-2, .grid-3, .grid-4, .grid-6, .grid-2-7-5, .grid-2-6-6, .grid-2-8-4, .grid-3-3 { gap: .8vh 1.6vw !important }
+  .pillar { padding: .6vh 1.2vw !important }
+  .pillar h4 { font-size: max(11px, 1.8vh) !important; line-height: 1.2 }
+  .pillar ul { font-size: max(9px, 1.5vh) !important; line-height: 1.35; gap: .3vh !important }
+  .level-row { padding: .5vh 0 !important }
+  .frame > * + * { margin-top: 0 !important }
+  q, blockquote, .q-big, .quote { font-size: max(13px, 2.4vh) !important; line-height: 1.35 !important }
+  table { font-size: max(9px, 1.5vh) !important; line-height: 1.35 !important }
+  td, th { padding: .3vh .8vw !important }
+  ul li, ol li { font-size: max(10px, 1.6vh) !important; line-height: 1.4 !important; margin-bottom: .2vh !important }
+  pre, code { font-size: max(9px, 1.5vh) !important }
+  /* portrait overlay 在 landscape 不顯示 */
   #portrait-hint { display: none !important }
+}
+
+/* ===== compact-landscape：對 4–7 列 rowline 的密集頁加更激進壓縮 ===== */
+@media (max-height:500px) and (orientation:landscape) {
+  .slide.compact-landscape .frame { padding-top: .4vh !important }
+  .slide.compact-landscape .kicker { margin-bottom: .2vh !important; font-size: max(7px, 1.1vh) !important }
+  .slide.compact-landscape .h-xl { font-size: max(15px, 3.4vh) !important; line-height: 1.04 !important; margin: 0 !important }
+  .slide.compact-landscape .h-sub, .slide.compact-landscape .h2-zh { font-size: max(13px, 2.4vh) !important; line-height: 1.1 !important; margin: .2vh 0 !important }
+  /* rowline wrapper：壓 inline margin-top + 把 grid 行為退掉 */
+  .slide.compact-landscape .rowline { display: block !important; margin-top: .4vh !important; padding: 0 !important; border: 0 !important }
+  /* row（每筆：row-no / row-h / row-d 三欄）：縮 padding、gap、字級 */
+  .slide.compact-landscape .row {
+    gap: 1vw !important;
+    padding: .2vh 0 !important;
+    border-top: 1px solid rgba(127,127,127,.22);
+    align-items: baseline !important;
+    line-height: 1.2 !important;
+  }
+  .slide.compact-landscape .rowline > .row:first-child { border-top: 0 }
+  .slide.compact-landscape .row-no {
+    flex: 0 0 auto; min-width: 3.2em;
+    font-family: var(--serif-en); font-weight: 700;
+    font-size: max(11px, 1.9vh) !important;
+    line-height: 1.05;
+  }
+  .slide.compact-landscape .row-h {
+    flex: 0 0 28%;
+    font-family: var(--serif-zh); font-weight: 700;
+    font-size: max(10px, 1.6vh) !important;
+    line-height: 1.18;
+  }
+  .slide.compact-landscape .row-d {
+    flex: 1 1 auto;
+    font-family: var(--sans-zh);
+    font-size: max(9px, 1.45vh) !important;
+    line-height: 1.28;
+    opacity: .88;
+  }
+  /* callout：壓更小，inline margin-top 也覆蓋 */
+  .slide.compact-landscape .callout {
+    padding: .35vh 1.2vw !important;
+    font-size: max(9px, 1.4vh) !important;
+    line-height: 1.28 !important;
+    margin: .4vh 0 0 !important;
+    border-left-width: 2px !important;
+  }
+  /* chrome + foot 再瘦一點 */
+  .slide.compact-landscape .chrome,
+  .slide.compact-landscape .foot { font-size: max(7px, 1.2vh) !important }
+  /* 涵蓋 inline style="margin-top:..." 的場景：強制壓掉 */
+  .slide.compact-landscape .frame > [style*="margin-top"] { margin-top: .4vh !important }
 }
 
 </style>
@@ -834,7 +895,7 @@
 </section>
 
 <!-- ============ 7 / 30 · Status Code 對照 ============ -->
-<section class="slide light">
+<section class="slide light compact-landscape">
   <div class="chrome">
     <div>Status Code · 五個必認的數字</div>
     <div>07 / 30 <a class="chrome-link" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/CH6-1.html" target="_blank" rel="noopener" title="開啟 CH6-1 詳細講義（新分頁）">講義 · CH6-1</a></div>
@@ -920,7 +981,7 @@
 </section>
 
 <!-- ============ 9 / 30 · 控成本 4 法 (pipeline, starred) ============ -->
-<section class="slide light" data-animate="pipeline">
+<section class="slide light compact-landscape" data-animate="pipeline">
   <div class="chrome">
     <div>Cost Control · 4 招把帳單壓下來</div>
     <div>09 / 30 <a class="chrome-link starred" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/CH6-1.html" target="_blank" rel="noopener" title="開啟 CH6-1 詳細講義（新分頁）">講義 · CH6-1</a></div>
@@ -1004,7 +1065,7 @@
 </section>
 
 <!-- ============ 11 / 30 · Rate Limit + 指數退避 (pipeline) ============ -->
-<section class="slide light" data-animate="pipeline">
+<section class="slide light compact-landscape" data-animate="pipeline">
   <div class="chrome">
     <div>Rate Limit · 指數退避</div>
     <div>11 / 30 <a class="chrome-link" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/CH6-1.html" target="_blank" rel="noopener" title="開啟 CH6-1 詳細講義（新分頁）">講義 · CH6-1</a></div>
@@ -1088,7 +1149,7 @@
 </section>
 
 <!-- ============ 13 / 30 · 4xx vs 5xx 錯誤策略 ============ -->
-<section class="slide light">
+<section class="slide light compact-landscape">
   <div class="chrome">
     <div>Error Handling · 4xx vs 5xx</div>
     <div>13 / 30 <a class="chrome-link" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/CH6-1.html" target="_blank" rel="noopener" title="開啟 CH6-1 詳細講義（新分頁）">講義 · CH6-1</a></div>
@@ -1557,7 +1618,7 @@
 </section>
 
 <!-- ============ 25 / 30 · CH6-2 收束 callout ============ -->
-<section class="slide light">
+<section class="slide light compact-landscape">
   <div class="chrome">
     <div>CH6-2 · 收束</div>
     <div>25 / 30 <a class="chrome-link" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/CH6-2.html" target="_blank" rel="noopener" title="開啟 CH6-2 詳細講義（新分頁）">講義 · CH6-2</a></div>
@@ -1643,7 +1704,7 @@
 </section>
 
 <!-- ============ 27 / 30 · 常見問題 FAQ ============ -->
-<section class="slide light">
+<section class="slide light compact-landscape">
   <div class="chrome">
     <div>FAQ · 學員今天最常問的</div>
     <div>27 / 30 <a class="chrome-link" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/" target="_blank" rel="noopener" title="開啟 Part 6 索引（新分頁）">講義 · Part 6</a></div>
