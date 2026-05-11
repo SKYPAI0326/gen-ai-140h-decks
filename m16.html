@@ -1343,34 +1343,34 @@ html.mobile-reader .chrome-link { margin-left: 0 !important; align-self: flex-st
     <div>Hands-on · 把 Guardrail 做成 middleware</div>
     <div>19 / 32 <a class="chrome-link starred" href="https://skypai0326.github.io/courses/courses/gen-ai-140h/part6/PRAC6-3.html" target="_blank" rel="noopener" title="開啟詳細講義（新分頁）">講義 · PRAC6-3</a></div>
   </div>
-  <div class="frame" style="padding-top:6vh">
+  <div class="frame" style="padding-top:2vh">
     <div class="kicker" data-anim>Now You Try · 30 分鐘動手</div>
-    <h2 class="h-xl" data-anim>Guardrail = <em>可單元測試的 middleware</em></h2>
+    <h2 class="h-xl" style="font-size:3.6vw; line-height:1.12" data-anim>Guardrail = <em>可單元測試的 middleware</em></h2>
 
-    <div class="rowline" style="margin-top:5vh; display:flex; flex-direction:column; gap:1.4vh">
-      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:1.8vh 0; border-bottom:1px solid rgba(var(--ink-rgb),.15); align-items:start">
+    <div class="rowline" style="margin-top:1.6vh; display:flex; flex-direction:column; gap:.2vh">
+      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:.8vh 0; border-bottom:1px solid rgba(var(--ink-rgb),.15); align-items:start">
         <div><strong>挑戰 1 · 紅隊測試</strong></div>
         <div>用 3 種攻擊測你自家 bot：直接覆寫 / 角色扮演 / 編碼夾帶——記錄越獄成功率，整理「失分表」。</div>
       </div>
-      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:1.8vh 0; border-bottom:1px solid rgba(var(--ink-rgb),.15); align-items:start">
+      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:.8vh 0; border-bottom:1px solid rgba(var(--ink-rgb),.15); align-items:start">
         <div><strong>挑戰 2 · 邊界 10 題</strong></div>
         <div>寫 10 題「貌似合理但其實越界」的問題，標 in / adjacent / out，看分類器跟你直覺差距多大。</div>
       </div>
-      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:1.8vh 0; border-bottom:1px solid rgba(var(--ink-rgb),.15); align-items:start">
+      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:.8vh 0; border-bottom:1px solid rgba(var(--ink-rgb),.15); align-items:start">
         <div><strong>挑戰 3 · 寫成 middleware</strong></div>
         <div>抽出 pii_filter、jailbreak_filter，串成 jailbreak → pii → 主 LLM → output compliance，每層回 {pass, reason, mutated_input}。</div>
       </div>
-      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:1.8vh 0; align-items:start">
+      <div data-anim style="display:grid; grid-template-columns:1fr 3fr; gap:2vw; padding:.8vh 0; align-items:start">
         <div><strong>驗收</strong></div>
         <div>能列出每一次請求通過了哪些 guardrail、在哪一層被擋 / 改寫——這就叫可稽核。</div>
       </div>
     </div>
 
-    <div class="callout" style="margin-top:4vh" data-anim>
+    <div class="callout" style="margin-top:1.4vh" data-anim>
       <strong>核心觀念：</strong>Guardrail 不是「希望模型表現好」，是<strong>程式碼把它逼成這樣</strong>。能單元測試的 middleware 才靠得住。
     </div>
 
-    <div class="meta-row" style="margin-top:3vh" data-anim>
+    <div class="meta-row" style="margin-top:1vh" data-anim>
       <span>End of Act II · Guardrails</span><span>·</span><span>下一幕 · Cost 成本控管</span>
     </div>
   </div>
